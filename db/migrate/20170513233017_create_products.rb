@@ -8,6 +8,8 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.integer :netPrice
       t.integer :stock
 
+      t.references :provider, foreign_key: true
+
       t.timestamps
     end
   end
